@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #box{
+            width:100px;
+            height: 100px;
+            background-color: magenta;
+            margin: 200px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="range" id="slider" onmousemove="update()" max="1000">
+
+    <div id="box">
+
+    </div>
+    
+
+    <script>
+        sliderObj=document.getElementById("slider")
+        boxObj=document.getElementById("box")
+        function update()
+        {
+         boxObj.style.transform=`rotate(${sliderObj.value}deg)`   
+         boxObj.style.left=`${sliderObj.value}px`
+        }
+    </script>
+
+</body>
+</html>
